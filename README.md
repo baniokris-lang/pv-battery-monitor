@@ -1,16 +1,49 @@
-# React + Vite
+# PV Battery Monitor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Symulacja systemu zarządzania energią z paneli fotowoltaicznych i akumulatora.  
+Projekt demonstracyjny z dziedziny IoT / Energy Management Systems.
 
-Currently, two official plugins are available:
+🔗 **Demo live:** [pv-battery-monitor.vercel.app](https://pv-battery-monitor.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Funkcje
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ☀️ Symulacja mocy paneli PV w czasie rzeczywistym
+- 🔋 Wizualizacja stanu akumulatora z paskiem ładowania
+- ⚡ Animowany schemat przepływu energii: PV → Akumulator → Sala
+- 🏢 Widok sali konferencyjnej z parametrami zużycia
+- 📈 Wykres liniowy mocy PV vs obciążenie (ostatnie 30 s)
+- 🔌 Przycisk odłączenia PV — obserwacja rozładowania akumulatora
+- ⚠️ Alert przy niskim poziomie baterii
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologie
+
+| Technologia | Zastosowanie |
+|---|---|
+| React 18 | UI, symulacja (`useState`, `useEffect`, `useRef`) |
+| Vite | Bundler, dev server |
+| SVG | Wykres liniowy bez zewnętrznych bibliotek |
+| CSS (vanilla) | Stylowanie |
+
+---
+
+## Uruchomienie lokalne
+
+```bash
+git clone https://github.com/baniokris-lang/pv-battery-monitor.git
+cd pv-battery-monitor
+npm install
+npm run dev
+```
+
+Aplikacja dostępna pod `http://localhost:5173`
+
+---
+
+## Kontekst
+
+Projekt powstał jako demonstracja umiejętności frontendowych przygotowana  
+na potrzeby prezentacji w branży automatyki budynkowej i zarządzania energią.
