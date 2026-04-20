@@ -1,0 +1,63 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: #f5f7fa; }
+.app { max-width: 620px; margin: 32px auto; padding: 0 16px; }
+
+.header { display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 14px; border-bottom: 1px solid #dde3ed; margin-bottom: 16px; }
+.logo { font-size: 14px; font-weight: 600; color: #185FA5; }
+.clock { font-size: 13px; color: #888; font-variant-numeric: tabular-nums; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.tab { padding: 8px 18px; border-radius: 8px; border: 1px solid #dde3ed;
+  background: white; font-size: 13px; cursor: pointer; color: #555; }
+.tab.active { background: #185FA5; color: white; border-color: #185FA5; }
+
+.panel { background: white; border-radius: 12px; padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+
+/* Diagram */
+.diagram { display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.dia-node { display: flex; flex-direction: column; align-items: center;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;
+  padding: 14px 18px; min-width: 110px; }
+.dia-icon { font-size: 28px; margin-bottom: 4px; }
+.dia-label { font-size: 11px; color: #888; text-transform: uppercase;
+  letter-spacing: 0.05em; margin-bottom: 4px; }
+.dia-value { font-size: 15px; font-weight: 600; color: #222; }
+.batt-bar-wrap { width: 80px; height: 6px; background: #e8eaed;
+  border-radius: 3px; margin-top: 8px; overflow: hidden; }
+.batt-bar { height: 100%; border-radius: 3px; transition: width 0.5s, background 0.5s; }
+.charging-badge { font-size: 11px; color: #27ae60; margin-top: 6px; font-weight: 500; }
+
+.dia-arrow { display: flex; align-items: center; gap: 0; }
+.arrow-line { width: 40px; height: 2px; }
+.arrow-line.active { background: #27ae60; }
+.arrow-line.inactive { background: #ddd; }
+.arrow-tip { font-size: 18px; color: #aaa; margin-left: -4px; }
+
+/* Control */
+.control-row { display: flex; justify-content: space-between; align-items: center;
+  padding-top: 16px; border-top: 1px solid #f0f2f5; }
+.control-label { font-size: 13px; color: #444; }
+.toggle-btn { padding: 8px 20px; border-radius: 8px; border: none;
+  font-size: 13px; font-weight: 500; cursor: pointer; }
+.toggle-btn.on { background: #fdecea; color: #c0392b; }
+.toggle-btn.off { background: #eafaf1; color: #27ae60; }
+
+.alert { margin-top: 14px; background: #fdf0e6; color: #a84300;
+  border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+
+/* Room stats */
+.room-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.stat-card { background: #f8fafc; border-radius: 10px; padding: 14px 16px;
+  border: 1px solid #e2e8f0; }
+.stat-label { font-size: 11px; color: #888; text-transform: uppercase;
+  letter-spacing: 0.05em; margin-bottom: 6px; }
+.stat-val { font-size: 16px; font-weight: 600; color: #222; }
+
+/* Chart */
+.chart-wrap { }
+.chart-title { font-size: 12px; color: #888; margin-bottom: 8px; }
+.chart-svg { width: 100%; height: auto; display: block; }
+.chart-empty { font-size: 13px; color: #aaa; text-align: center; padding: 20px; }
